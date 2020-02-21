@@ -11,6 +11,7 @@
 
 <style>
   .footer {
+    color: var(--light-font);
     background-color: var(--primary);
     width: 100vw;
     position: fixed;

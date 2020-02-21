@@ -1,8 +1,14 @@
 :root {
-	--primary: rgb(100, 100, 231);
-	--secondary: yellow;
+	--primary: #142850;
+	--secondary: #27496d;
+	--light-bg: #00a8cc;
+	--light-font: rgb(240, 239, 239);
 	--primary-font: black;
+	--light-boarder: white;
+	--dark-boarder: black;
+	--disabled: #999; 
 	--links: blue;
+	--visted: #0c7b93;
 	--warning: red;
 }
 
@@ -13,7 +19,7 @@ html, body {
 }
 
 body {
-	color: rgb(0, 0, 0);
+	color: var(--primary-font);
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -21,7 +27,7 @@ body {
 }
 
 a {
-	color: rgb(0,100,200);
+	color: var(--link);
 	text-decoration: none;
 }
 
@@ -30,7 +36,7 @@ a:hover {
 }
 
 a:visited {
-	color: rgb(0,80,160);
+	color: var(--visted);
 }
 
 label {
@@ -43,12 +49,12 @@ input, button, select, textarea {
 	padding: 0.4em;
 	margin: 0 0 0.5em 0;
 	box-sizing: border-box;
-	border: 1px solid #ccc;
+	border: 1px solid var(--light-boarder);
 	border-radius: 2px;
 }
 
 input:disabled {
-	color: #ccc;
+	color: var(--light-boarder);
 }
 
 input[type="range"] {
@@ -56,19 +62,19 @@ input[type="range"] {
 }
 
 button {
-	color: #333;
-	background-color: #f4f4f4;
+	color: var(--primary-font);
+	background-color: var(--light-bg);
 	outline: none;
 }
 
 button:disabled {
-	color: #999;
+	color: var(--disabled);
 }
 
 button:not(:disabled):active {
-	background-color: #ddd;
+	background-color: var(--light-bg);
 }
 
 button:focus {
-	border-color: #666;
+	border-color: var(--secondary);
 }

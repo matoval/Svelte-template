@@ -12,6 +12,7 @@ onMount(() => {
 })
 
 function resizing() {
+  console.log("resize");
   console.log(document.body.clientWidth);
   if(document.body.clientWidth < 600) {
     isMobile = true;
@@ -35,10 +36,10 @@ window.addEventListener("resize", resizing);
     {#if !isMobile}
     <div class="nav">
       <ul>
-        <li on:click="">Nav1</li>
-        <li on:click="">Nav1</li>
-        <li on:click="">Nav1</li>
-        <li on:click="">Nav1</li>
+        <li><button>Nav1</button></li>
+        <li><button>Nav1</button></li>
+        <li><button>Nav1</button></li>
+        <li><button>Nav1</button></li>
       </ul>
     </div>
     {:else if isMobile}
@@ -46,10 +47,10 @@ window.addEventListener("resize", resizing);
       <button class="open-menu" on:click="{toggleMenu}">&#9776</button>
       {#if menu}
         <ul>
-          <li on:click="">Nav1</li>
-          <li on:click="">Nav1</li>
-          <li on:click="">Nav1</li>
-          <li on:click="">Nav1</li>
+          <li><button>Nav1</button></li>
+          <li><button>Nav1</button></li>
+          <li><button>Nav1</button></li>
+          <li><button>Nav1</button></li>
         </ul>
       {/if}
     </div>
@@ -71,14 +72,21 @@ window.addEventListener("resize", resizing);
   .logo {
     padding: 5px;
     margin-left: 20px;
-
+    color: var(--light-font);
   }
 
   .nav {
     margin-right: 25px;
   }
 
+  button {
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
   .nav li {
+    color: var(--light-font);
     list-style: none;
     float: left;
     padding: 5px 15px;
@@ -88,35 +96,35 @@ window.addEventListener("resize", resizing);
     margin: 0;
   }
 
-  .mobile-nav {
+  .mobile-nav ul {
     position: fixed;
-    right: 0;
-    background-color: var(--primary);
+    padding: 5px;
+    right: 10px;
+    top: 30px;
+    list-style: none;
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
-    margin: 5px;
+    background-color: var(--primary);
+    border-radius: 0 0 5px 5px;
   }
 
   .mobile-nav li {
-    list-style: none;
+    padding: 8px;
+    color: var(--light-font);
   }
 
   .open-menu {
+    position: fixed;
+    right: 0;
     border: none;
     width: 35px;
+    color: var(--light-font);
     background-color: var(--secondary);
     margin: 5px;
   }
 
   @media only screen and (max-device-width: 600px) {
-    .nav {
-      display: none;
-    }
-
-    .mobile-nav {
-    display: flex;
-    }
+    
   } 
 	
 </style>

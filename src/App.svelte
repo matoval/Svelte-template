@@ -1,18 +1,18 @@
 <script>
-import Header from "./Header.svelte";
-import Footer from "./Footer.svelte";
+import Topbar from "./Topbar.svelte";
+import Bottombar from "./Bottombar.svelte";
 	
 </script>
 
 <main>
-	<div class="header">
-		<Header></Header>
-	</div>
+	<header>
+		<Topbar></Topbar>
+	</header>
 	<div class="main">
 	</div>
-	<div class="footer">
-		<Footer></Footer>
-	</div>
+	<footer>
+		<Bottombar></Bottombar>
+	</footer>
 </main>
 
 <style>
