@@ -27,7 +27,7 @@ window.addEventListener("resize", resizing);
 <main on:resize="{resizing}">
   <div class="topbar">
     <div class="logo">
-      <h1>Harry Potter in JavaScript</h1>
+      <h1>LOGO</h1>
     </div>
     {#if !isMobile}
     <div class="nav">
