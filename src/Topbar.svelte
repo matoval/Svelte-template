@@ -12,15 +12,11 @@ onMount(() => {
 })
 
 function resizing() {
-  console.log("resize");
-  console.log(document.body.clientWidth);
   if(document.body.clientWidth < 600) {
     isMobile = true;
-    console.log(isMobile);
   } 
   else {
     isMobile = false;
-    console.log(isMobile);
   }
 }
 
@@ -31,7 +27,7 @@ window.addEventListener("resize", resizing);
 <main on:resize="{resizing}">
   <div class="topbar">
     <div class="logo">
-      <h1>LOGO</h1>
+      <h1>Harry Potter in JavaScript</h1>
     </div>
     {#if !isMobile}
     <div class="nav">
